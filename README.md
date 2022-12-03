@@ -1,2 +1,0 @@
-# mem-ria
-index.html

@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Memória Játék</title>
+<script type="text/javascript" src="memory.js">
+</script>
+<link rel="stylesheet" type="text/css" href="memory.css">
+</head>
+<body onLoad="kever();">
+<table align="center">
+<tr>
+<td>
+<table><tr><td><img src="kep/0.png" id="a1" onClick="mutat(1)">
+</td>
+<td><img src="kep/0.png" id="a2" onClick="mutat(2)">
+</td>
+<td><img src="kep/0.png" id="a3" onClick="mutat(3)">
+</td>
+<td><img src="kep/0.png" id="a4" onClick="mutat(4)">
+</td>
+<td>
+<img src="kep/0.png" id="a5" onClick="mutat(5)">
+</td>
+<td>
+<img src="kep/0.png" id="a6" onClick="mutat(6)">
+</td>
+</tr>
+<tr>
+<td>
+<img src="kep/0.png" id="a7" onClick="mutat(7)">
+</td>
+<td>
+<img src="kep/0.png" id="a8" onClick="mutat(8)">
+</td>
+<td>
+<img src="kep/0.png" id="a9" onClick="mutat(9)">
+</td>
+<td>
+<img src="kep/0.png" id="a10" onClick="mutat(10)">
+</td>
+<td>
+<img src="kep/0.png" id="a11" onClick="mutat(11)">
+</td>
+<td>
+<img src="kep/0.png" id="a12" onClick="mutat(12)">
+</td>
+</tr>
+<tr>
+<td>
+<img src="kep/0.png" id="a13" onClick="mutat(13)">
+</td>
+<td>
+<img src="kep/0.png" id="a14" onClick="mutat(14)">
+</td>
+<td>
+<img src="kep/0.png" id="a15" onClick="mutat(15)">
+</td>
+<td>
+<img src="kep/0.png" id="a16" onClick="mutat(16)">
+</td>
+<td>
+<img src="kep/0.png" id="a17" onClick="mutat(17)">
+</td>
+<td>
+<img src="kep/0.png" id="a18" onClick="mutat(18)">
+</td>
+</tr>
+</table>
+</td>
+<td>
+<form name="tick" action="index.html" method="post"><table id="jatek">
+<tr>
+<td height="30" colspan="2" align="center"><b>Memória játék</b>
+<hr>
+</td>
+</tr>
+<tr>
+<td width="120" height="26">Lépések száma</td>
+<td width="68" align="center">
+<input type="text" id="szam">
+</td>
+</tr>
+<tr>
+<tdheight="26">Idő
+</td>
+<td align="center">
+<input type="text" id="clock" size="2">
+</td>
+</tr>
+<tr>
+<td colspan="2"><div id="show">
+</div>
+</td>
+</tr>
+<tr>
+5<td colspan="2" align="right" valign="bottom">
+<input name="submit" type="submit" id="kuld" value="Új játék">
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</body>
+</html>
