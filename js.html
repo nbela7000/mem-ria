@@ -1,0 +1,66 @@
+kepek=new
+Array("kep/0.png","kep/1.png","kep/1.png","kep/2.png","kep/2.png","kep/3.png","kep/3.png",
+"kep/4.png","kep/4.png","kep/5.png","kep/5.png","kep/6.png","kep/6.png","kep/7.png","kep/7.png",
+"kep/8.png","kep/8.png","kep/9.png","kep/9.png");
+var tarto=new Array();
+var ora=0;
+var perc=0;
+var sec=0;
+r=0;
+idokesz=true;
+function kever()
+{
+for (i=1;i<1000;i++)
+{
+x=Math.round(Math.random()*17)+1;
+y=Math.round(Math.random()*17)+1;
+sv=kepek[x];
+kepek[x]=kepek[y];
+kepek[y]=sv;
+}
+ido(idokesz);
+}
+function mutat(x)
+{
+//alert(x);
+p=document.getElementById('a'+x).src.split("/");
+if (p[p.length-1]=='0.png')
+{
+//alert(document.all.item('a'+x).src);
+document.getElementById("szam").value++;document.getElementById('a'+x).src=kepek[x];
+r++;tarto[r]=x;if ((r==3) && (kepek[tarto[1]]!=kepek[tarto[2]]))
+{
+for (i=1;i<3;i++)
+{
+document.getElementById('a'+tarto[i]).src=kepek[0];
+}
+7tarto[1]=tarto[3];r=1;}
+if ((r==3) && (kepek[tarto[1]]==kepek[tarto[2]]))
+{
+tarto[1]=tarto[3];r=1;
+}
+kesz=true;
+for (i=1;i<19;i++){p=document.getElementById('a'+i).src.split("/");
+if (p[p.length-1]=='0.png')
+{kesz=false;
+}
+}
+if(kesz)
+{
+document.getElementById("show").innerHTML=("<b>Gratulálok!</b><br> Kiraktad "+document.getElementById("szam").value+" lépésb&otilde;l.<br>Id&otilde;d: "+document.tick.clock.value);
+idokesz=false;
+}
+}
+}
+function ido(ilog)
+{
+if (ilog){sec++if ((sec % 60)==0){perc++;sec=0;
+}
+if (((perc!=0) && ((perc % 60)==0)))
+{
+ora++;minutes=0;seconds=0;
+}
+document.tick.clock.value=ora+":"+perc+":"+sec;
+setTimeout("ido(idokesz)",1000)
+}
+}
